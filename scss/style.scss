@@ -1,0 +1,124 @@
+/*------------------------------------------------------------
+|  Author: Free-Template.co                                   
+|  Author URL: https://free-template.co/                      
+|  License: https://creativecommons.org/licenses/by/3.0/      
+|  License URL: https://creativecommons.org/licenses/by/3.0/  
+|  Template License: https://free-template.co/template-license/
+-------------------------------------------------------------*/
+body {
+		
+}
+*{
+	transition: .3s all ease;
+}
+$white: #fff;
+.ftco-404 {
+	background-size: cover;
+	background-repeat: repeat;
+	background-position: center center;
+	// background: #ccc;
+	a {
+		color: $white;
+	}
+	&:before {
+		content: "";
+		z-index: 1;
+		position: fixed;
+		top: 0; left: 0; right: 0; bottom: 0;
+		background-color: rgba(0,0,0,.44);
+	}
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+
+	&, .row {
+		height: 100vh;
+		min-height: 900px;
+	}
+	.logo {
+		display: inline-block;
+		position: relative;
+		transition: .3s all ease-in-out;
+		top: 0;
+		img {
+			max-width: 100px;
+			margin-bottom: 2rem;
+		}
+		&:hover {
+			top: -10px;
+		}
+	}
+	.h1, h2 {
+		color: $white;
+	}
+	.h1 {
+		font-size: 18rem;
+		font-weight: 900;
+
+		position: relative;
+		@media screen and(max-width: 980px) {
+			font-size: 10rem;
+		}
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	p {
+		font-size: 1.3rem;
+		color: rgba($white, .8);
+	}
+	
+	.btn {
+		padding: .8rem 2rem;
+		&:hover, &:active, &:focus {
+			outline: none;
+			box-shadow: none!important;
+		}
+		&.btn-home {
+			background: #00bd56;
+			color: $white;
+			border-color: #00bd56;
+			border-width: 2px;
+			
+			
+			&:hover {
+				background: darken(#85ef47, 15%);
+				border-color: darken(#85ef47, 15%);
+			}
+		}
+		&.btn-outline {
+			border-color: $white;
+			border-width: 2px;
+			background: transparent;
+			color: $white;
+			&:hover {
+				background: $white;
+				color: #00bd56;
+			}
+		}
+	}
+	.last {
+		line-height: 0;
+		position: relative;
+		display: inline-block;
+		&.sleep {
+			opacity: 0;
+			visibility: hidden;
+			transition: .8s all ease-in-out;
+			top: -70px;
+		}
+		&.awake {
+			opacity: 1;
+			visibility: visible;
+			top: 0px;
+		}
+	}
+}
+.copyright {
+	line-height: 1;
+	small {
+		font-size: .7rem;
+	}
+}
+
