@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Under Construction</title>
+</head>
+<body>
+  <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div style="text-align: center; max-width: 500px; padding: 20px; background-color: #fff; border-radius: 5px;">
+      <h1 style="font-size: 36px; margin-bottom: 20px;">Under Construction</h1>
+      <p style="font-size: 18px; margin-bottom: 15px;">We apologize for the inconvenience. This website is currently under construction.</p>
+      <p style="font-size: 18px; margin-bottom: 15px;">Expected Completion: <span id="countdown"></span></p>
+      <p style="font-size: 18px; margin-bottom: 15px;">Contact: <a href="mailto:info@example.com">info@example.com</a></p>
+      <form action="subscribe.php" method="POST" style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+        <input type="email" name="email" placeholder="Enter your email" required style="width: 250px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+        <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; color: #fff; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    var countdownElement = document.getElementById("countdown");
+    var countdownDate = new Date("2023-12-31").getTime();
+
+    var countdownInterval = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countdownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerText = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+      if (distance < 0) {
+        clearInterval(countdownInterval);
+        countdownElement.innerText = "Website is now live!";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
