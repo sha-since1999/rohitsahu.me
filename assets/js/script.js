@@ -17,3 +17,4 @@ if (distance < 0) {
     countdownElement.innerText = "Website is now live!";
     }
 }, 1000);
+
