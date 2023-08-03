@@ -1,5 +1,5 @@
 var countdownElement = document.getElementById("countdown");
-var countdownDate = new Date("2023-07-31").getTime();
+var countdownDate = new Date("2023-08-30").getTime();
 
 var countdownInterval = setInterval(function() {
 var now = new Date().getTime();
